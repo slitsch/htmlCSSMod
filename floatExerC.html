@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Float Exercise</title>
+    <style>
+        #header {
+            background-color: #000;
+            color: #fff;
+            min-height: 50px;
+            position: relative;
+        }
+        #headerText {
+            font-size: 80px;
+            font-family: cursive;
+            text-align: center;
+        }
+        #logo {
+            width: 80px;
+            height: 80px;
+            background-color: darkseagreen;
+            position: absolute;
+            right:0;
+        }
+        #nav {
+            background-color: #ccc;
+            /*height: 50px;*/
+        }
+        #nav ul,
+        #nav li {
+            list-style-type: none;
+            padding: 0;
+            margin:0;
+        }
+        #nav li {
+            float: left;
+        }
+        #nav a {
+            /*blocks surrounding text*/
+            font-family: sans-serif;
+            color: navy;
+            padding: 10px 10px;
+            display: inline-block;
+            /*width: 100px;*/
+            background-color: yellowgreen;
+            margin-right: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin: 15px 25px 15px 0;
+            text-decoration: none;
+        }
+        #nav a:first-child {
+            /*gets first element or a tag
+            also last child - last a tag
+            nth-child, index starts at one
+            */
+            margin-left: 10px;
+        }
+
+        #nav a:nth-child(2) {
+            /*not quite right
+            gets first element or a tag
+            also last child - last a tag
+            nth-child, index starts at one
+            */
+            margin-left: 50px;
+        }
+        article,
+        aside {
+            float:left;
+            padding: 10px;
+            margin-left: 10px;
+            /*delay hover*/
+            transition: all 1s;
+        }
+
+        aside:hover {
+            background-color: #ccc;
+            color: #fff;
+        }
+        article{
+            width:55%;
+            /*go for less than 100% because error
+            padding:2% clumsy math so can use container*/
+            min-width: 300px;
+            padding:10px;
+        }
+        aside{
+            float:right;
+            width:30%;
+            padding:10px;
+            padding-left: 15px;
+        }
+        .clearfix {
+        clear:both;
+    }
+    </style>
+</head>
+<body>
+  <div id="header">
+      <div id="logo">XXX</div>
+      <div id="headerText">The Test Page</div>
+  </div>
+  <div  id="nav">
+      <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">gallery</a></li>
+          <li><a href="#">about</a></li>
+
+      </ul>
+      <div class = "clearfix"></div>
+    </div>
+  <div id="content">
+      <article>
+          <h1>
+              Article 1 Title
+          </h1>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur harum nisi quos. Animi aperiam culpa cumque debitis eaque, expedita in molestiae necessitatibus non nulla odit ratione recusandae reprehenderit sint ut!
+         </p>
+
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab accusantium atque beatae corporis dolor, dolore doloribus ducimus, ea hic maiores, maxime natus nulla pariatur perferendis quaerat quos recusandae repudiandae!
+         </p>
+      </article>
+
+     <aside>
+         <h1>Aside</h1>
+         <p>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium assumenda, consequuntur dignissimos dolore ea eaque eius eum hic iure laudantium officia quam quas quo recusandae sapiente totam unde, ut?
+         </p>
+     </aside>
+      <div class = "clearfix"></div>
+      <article>
+          <h1>
+              Article 2 Title
+          </h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur harum nisi quos. Animi aperiam culpa cumque debitis eaque, expedita in molestiae necessitatibus non nulla odit ratione recusandae reprehenderit sint ut!
+          </p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab accusantium atque beatae corporis dolor, dolore doloribus ducimus, ea hic maiores, maxime natus nulla pariatur perferendis quaerat quos recusandae repudiandae!
+          </p>
+      </article>
+
+      <aside>
+          <h1>Aside</h1>
+          <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium assumenda, consequuntur dignissimos dolore ea eaque eius eum hic iure laudantium officia quam quas quo recusandae sapiente totam unde, ut?
+          </p>
+      </aside>
+
+
+  </div>
+
+  <div>
+      <ul>
+          <li>link</li>
+          <li>link</li>
+      </ul>
+
+  </div>
+
+</body>
+</html>

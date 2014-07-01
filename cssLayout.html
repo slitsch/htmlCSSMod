@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Layout exercises 1</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        #bg img{
+            width: 100%;
+        }
+
+        #bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        div{
+            border: 1px solid #333;
+            width: 200px;
+            height: 200px;
+            overflow: auto;
+            z-index: 3;
+            background: royalblue;
+        }
+
+        p{
+            color: red;
+        }
+        div p{
+            color:#fff;
+
+        }
+        #box1{
+            background: lightgray;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 3;
+
+        }
+        span.span2 {
+            border-width: 2px;
+            border-color: purple;
+            border-style: groove;
+        }
+
+        #tinybox {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            overflow: hidden;
+
+        }
+    </style>
+</head>
+<body>
+<div id="bg">
+    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTItuOVw3JI2PpD3IYXzP0172f-J0h9fvs7aemW1acMSzwdRnJqfQ"
+        alt="Sally look alike"    />
+</div>
+
+  <div id="box1">
+    <h1>Box 1</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at atque doloribus eos harum id incidunt, ipsam magnam necessitatibus nihil odit officiis pariatur placeat repellendus sunt tempore veritatis! Quae, sint.
+    </p>
+  </div>
+
+
+  <div id="box2">Box2
+      <style>
+          float:right;
+      </style>
+   <h1> Box 2</h1>
+
+      <div id="tinybox">
+          Tiny box!
+      </div>
+
+
+  </div>
+
+
+  <span class="span2">Span2
+  </span>
+  <div id="box3">Box 3</div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate excepturi laboriosam magnam maiores quidem velit. Ab consectetur, delectus est maxime nihil nisi odio officia provident, recusandae similique sit totam.
+</p>
+
+</body>
+</html>
