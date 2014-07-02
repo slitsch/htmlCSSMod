@@ -84,6 +84,16 @@
             padding:2% clumsy math so can use container*/
             min-width: 300px;
             padding:10px;
+            background-color: greenyellow;
+            /*can use diff values for each corner*/
+            border-radius: 30px;
+            margin-top: 10px;
+            box-shadow: 10px 20px 40px ;
+        }
+
+        article:hover {
+            background-color: #cc66be;
+            color: #fff;
         }
         aside{
             float:right;
@@ -94,6 +104,32 @@
         .clearfix {
         clear:both;
     }
+    @media (max-width: 800px) {
+        /*media query when the media has a max width of 500px do something
+        or min width or resolution/dpi?*/
+        article {
+            /*on narrow window, make article wider*/
+            width: 95%;
+        }
+        aside {
+            display:none;
+        }
+    }
+    @media print {
+        #header, #nav {
+            display: none;
+        }
+        #article, #aside {
+            /*does not work*/
+            width: 100%
+        }
+
+    .page-break {
+        display: block;
+        page-break-after: always;
+    }
+    }
+
     </style>
 </head>
 <body>
@@ -112,18 +148,26 @@
     </div>
   <div id="content">
       <article>
-          <h1>
+          <!--params dir and blur; dir cna be negative -->
+          <h1 style="text-shadow: -8px 5px 2px rgba(150,150,0,0.5);">
               Article 1 Title
           </h1>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur harum nisi quos. Animi aperiam culpa cumque debitis eaque, expedita in molestiae necessitatibus non nulla odit ratione recusandae reprehenderit sint ut!
+         <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aliquid aspernatur aut beatae dolore esse facilis impedit ipsa magni maxime natus nesciunt nisi officiis perspiciatis reprehenderit tenetur unde ut voluptatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dignissimos nam, nobis non provident quidem sed voluptates. Amet asperiores dolor doloribus ea earum excepturi, illo laboriosam officiis placeat quis tempore!consectetur adipisicing elit. Consectetur harum nisi quos. Animi aperiam culpa cumque debitis eaque, expedita in molestiae necessitatibus non nulla odit ratione recusandae reprehenderit sint ut!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque beatae debitis deserunt dolor dolorum expedita fugiat hic ipsum nihil odit optio quibusdam quos repellat rerum sed veniam, veritatis voluptate.
          </p>
 
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab accusantium atque beatae corporis dolor, dolore doloribus ducimus, ea hic maiores, maxime natus nulla pariatur perferendis quaerat quos recusandae repudiandae!
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab accusantium atque beatae corporis dolor, dolore doloribus ducimus, ea hic maiores, maxime natus nulla pariatur perferendis quaerat quos recusandae repudiandae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi autem beatae culpa deserunt dolor doloremque dolores est expedita, fugit, nihil nobis quo sed sequi, sit suscipit temporibus ullam veritatis?
          </p>
+          <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aliquam animi aperiam aspernatur atque autem dolores eligendi expedita harum inventore ipsam iusto minus molestias optio quam quia tempora, velit, voluptatum! consectetur adipisicing elit. Amet asperiores blanditiis distinctio earum est libero placeat quaerat qui quibusdam quidem quod, sed. Aliquid dicta dolor esse libero, repellendus vero voluptate!
+          </p>
       </article>
-
+<div class="page-break"></div>
      <aside>
-         <h1>Aside</h1>
+         <h1 style="text-shadow: 2px 2px 2px rgba(0,0,0,0.5);">Aside</h1>
+         <p>
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium assumenda, consequuntur dignissimos dolore ea eaque eius eum hic iure laudantium officia quam quas quo recusandae sapiente totam unde, ut?
+     </p>
+         <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aliquid aspernatur aut beatae dolore esse facilis impedit ipsa magni maxime natus nesciunt nisi officiis perspiciatis reprehenderit tenetur unde ut voluptatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dignissimos nam, nobis non provident quidem sed voluptates. Amet asperiores dolor doloribus ea earum excepturi, illo laboriosam officiis placeat quis tempore!consectetur adipisicing elit. Consectetur harum nisi quos. Animi aperiam culpa cumque debitis eaque, expedita in molestiae necessitatibus non nulla odit ratione recusandae reprehenderit sint ut!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque beatae debitis deserunt dolor dolorum expedita fugiat hic ipsum nihil odit optio quibusdam quos repellat rerum sed veniam, veritatis voluptate.
+         </p>
          <p>
              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium assumenda, consequuntur dignissimos dolore ea eaque eius eum hic iure laudantium officia quam quas quo recusandae sapiente totam unde, ut?
          </p>
@@ -135,7 +179,8 @@
           </h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur harum nisi quos. Animi aperiam culpa cumque debitis eaque, expedita in molestiae necessitatibus non nulla odit ratione recusandae reprehenderit sint ut!
           </p>
-
+          <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aliquid aspernatur aut beatae dolore esse facilis impedit ipsa magni maxime natus nesciunt nisi officiis perspiciatis reprehenderit tenetur unde ut voluptatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dignissimos nam, nobis non provident quidem sed voluptates. Amet asperiores dolor doloribus ea earum excepturi, illo laboriosam officiis placeat quis tempore!consectetur adipisicing elit. Consectetur harum nisi quos. Animi aperiam culpa cumque debitis eaque, expedita in molestiae necessitatibus non nulla odit ratione recusandae reprehenderit sint ut!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque beatae debitis deserunt dolor dolorum expedita fugiat hic ipsum nihil odit optio quibusdam quos repellat rerum sed veniam, veritatis voluptate.
+          </p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab accusantium atque beatae corporis dolor, dolore doloribus ducimus, ea hic maiores, maxime natus nulla pariatur perferendis quaerat quos recusandae repudiandae!
           </p>
       </article>
